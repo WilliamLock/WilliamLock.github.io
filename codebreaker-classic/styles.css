@@ -1,0 +1,125 @@
+:root {
+  color-scheme: dark;
+  --bg: #130b07;
+  --panel: #24120a;
+  --wood: #4b2110;
+  --brass: #d6a64d;
+  --text: #f4ead6;
+  --muted: #c4ad86;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(92, 43, 20, 0.62), transparent 34rem),
+    linear-gradient(135deg, #0b0705, var(--bg) 52%, #050403);
+  color: var(--text);
+}
+
+a {
+  color: var(--brass);
+}
+
+.page {
+  width: min(920px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+.hero,
+.content {
+  border: 1px solid rgba(214, 166, 77, 0.36);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.06), transparent 28%),
+    linear-gradient(135deg, rgba(75, 33, 16, 0.92), rgba(20, 9, 5, 0.94));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+}
+
+.hero {
+  padding: 76px 56px;
+}
+
+.hero.compact {
+  padding: 52px 48px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--brass);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 0.98;
+}
+
+h2 {
+  margin: 34px 0 10px;
+  color: #f6d890;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+.lead {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 1.25rem;
+  line-height: 1.55;
+}
+
+.links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.links a {
+  padding: 12px 18px;
+  border: 1px solid rgba(214, 166, 77, 0.5);
+  border-radius: 999px;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.content {
+  margin-top: 22px;
+  padding: 36px 42px;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.small {
+  margin-top: 34px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 920px);
+    padding: 28px 0;
+  }
+
+  .hero,
+  .hero.compact,
+  .content {
+    padding: 28px 24px;
+  }
+}
