@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cute Tic Tac Toe Fun</title>
+    <meta name="description" content="Cute Tic Tac Toe Fun is an ad-supported Tic Tac Toe game for iPhone and iPad with adorable graphics, two-player mode, and computer opponents.">
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #ffd4df;
+        color: #24191d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #ffd2dd 0%, #ffe8ef 54%, #ffffff 100%);
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 36px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        min-height: 82vh;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+        align-items: center;
+        gap: 48px;
+        padding: 46px 0 28px;
+      }
+
+      .app-mark {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 28px;
+      }
+
+      .app-mark img {
+        width: 76px;
+        height: 76px;
+        border-radius: 18px;
+        box-shadow: 0 16px 34px rgba(239, 60, 97, 0.22);
+      }
+
+      .eyebrow {
+        margin: 0 0 5px;
+        color: #a03355;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(42px, 8vw, 82px);
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        width: min(620px, 100%);
+        margin: 24px 0 0;
+        color: #5a3d46;
+        font-size: 21px;
+        line-height: 1.5;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 0 20px;
+        color: #ffffff;
+        background: #ef3c61;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 16px 28px rgba(239, 60, 97, 0.24);
+      }
+
+      .button.secondary {
+        color: #2b1b21;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: none;
+      }
+
+      .phone-frame {
+        justify-self: center;
+        width: min(100%, 360px);
+        aspect-ratio: 1320 / 2868;
+        border: 12px solid #21181c;
+        border-radius: 34px;
+        overflow: hidden;
+        background: #ffd4df;
+        box-shadow: 0 34px 70px rgba(120, 53, 72, 0.24);
+      }
+
+      .phone-frame img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        padding: 18px 0 54px;
+      }
+
+      .feature {
+        padding: 22px;
+        border: 1px solid rgba(239, 60, 97, 0.22);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.62);
+      }
+
+      .feature h2 {
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+
+      .feature p {
+        margin: 0;
+        color: #624751;
+        line-height: 1.45;
+      }
+
+      .screens {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 34px;
+        padding: 38px 0 70px;
+      }
+
+      .tablet {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 10px solid #21181c;
+        box-shadow: 0 28px 70px rgba(120, 53, 72, 0.2);
+      }
+
+      .tablet img {
+        width: 100%;
+        display: block;
+      }
+
+      .footer {
+        padding: 26px 0 42px;
+        color: #755b64;
+        font-size: 14px;
+      }
+
+      .footer a {
+        color: #a03355;
+      }
+
+      @media (max-width: 780px) {
+        main {
+          width: min(100% - 24px, 560px);
+        }
+
+        .hero,
+        .screens {
+          min-height: auto;
+          grid-template-columns: 1fr;
+          padding-top: 28px;
+        }
+
+        .phone-frame {
+          width: min(78vw, 310px);
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-label="Cute Tic Tac Toe Fun">
+        <div>
+          <div class="app-mark">
+            <img src="assets/app-icon.jpg" alt="Cute Tic Tac Toe Fun app icon">
+            <div>
+              <p class="eyebrow">Free with ads for iPhone and iPad</p>
+              <strong>Cute Tic Tac Toe Fun</strong>
+            </div>
+          </div>
+          <h1>Cute Tic Tac Toe Fun</h1>
+          <p class="lead">A sweet, quick Tic Tac Toe game with adorable characters, simple controls, two-player matches, and computer opponents for relaxed play anywhere.</p>
+          <div class="actions">
+            <a class="button" href="https://apps.apple.com/app/id6775123972">View on the App Store</a>
+            <a class="button secondary" href="https://williamlock.github.io/cute-tic-tac-toe-support/">Support</a>
+          </div>
+        </div>
+        <div class="phone-frame">
+          <img src="assets/iphone-game.png" alt="Cute Tic Tac Toe Fun gameplay on iPhone">
+        </div>
+      </section>
+
+      <section class="features" aria-label="Features">
+        <article class="feature">
+          <h2>Two Ways to Play</h2>
+          <p>Play against a friend or choose a computer opponent for a quick match.</p>
+        </article>
+        <article class="feature">
+          <h2>Cute Visuals</h2>
+          <p>Soft colors and playful characters make the classic board feel cheerful.</p>
+        </article>
+        <article class="feature">
+          <h2>Ad Supported</h2>
+          <p>The free edition uses ads so everyone can start playing without purchase.</p>
+        </article>
+      </section>
+
+      <section class="screens" aria-label="iPad screenshot">
+        <div>
+          <h2>Made for iPhone and iPad</h2>
+          <p class="lead">The board adapts across screen sizes so the game stays comfortable on small phones and larger iPad displays.</p>
+        </div>
+        <div class="tablet">
+          <img src="assets/ipad-game.png" alt="Cute Tic Tac Toe Fun gameplay on iPad">
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Copyright 2026 William Lock. For help, visit <a href="https://williamlock.github.io/cute-tic-tac-toe-support/">Cute Tic Tac Toe Support</a>.</p>
+      </footer>
+    </main>
+  </body>
+</html>
